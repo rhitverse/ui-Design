@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20, top: 8),
+                  padding: const EdgeInsets.only(left: 10, right: 10, top: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
                     height: 60,
                     width: double.infinity,
@@ -82,7 +82,7 @@ class HomePage extends StatelessWidget {
                             child: Text(
                               'Map',
                               style: const TextStyle(
-                                color: Colors.white,
+                                color: Color(0xffFFFFFF),
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 fontFamily: 'JetBrains',
@@ -91,6 +91,69 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 15),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    height: 150,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color(0xff1D1D1D),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 75, left: 16),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            AppIcon.icAir,
+                            height: 40,
+                            width: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Text(
+                              'LH1782',
+                              style: TextStyle(
+                                color: Color(0XFFFDFDFD),
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                                fontFamily: 'JetBrains',
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 145),
+                          Container(
+                            height: 22,
+                            width: 45,
+                            decoration: BoxDecoration(
+                              color: Color(0xff282828),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 8,top: 2),
+                              child: Text(
+                                '7842',
+                                style: TextStyle(color: Color(0xffFDFDFD),
+                                fontSize: 12
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Container(
+                            height: 22,
+                            width: 62,
+                            decoration: BoxDecoration(
+                              color: Color(0xff282828),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
