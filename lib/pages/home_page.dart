@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff111111),
+      backgroundColor: Color(0xff111111),
       body: SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
@@ -98,58 +98,113 @@ class HomePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
-                    height: 150,
+                    height: 175,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Color(0xff1D1D1D),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.only(bottom: 75, left: 16),
-                      child: Row(
+                      padding: const EdgeInsets.only(top: 18, left: 16),
+                      child: Column(
                         children: [
-                          SvgPicture.asset(
-                            AppIcon.icAir,
-                            height: 40,
-                            width: 40,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Text(
-                              'LH1782',
-                              style: TextStyle(
-                                color: Color(0XFFFDFDFD),
-                                fontSize: 13,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: 'JetBrains',
+                          Row(
+                            children: [
+                              SvgPicture.asset(
+                                AppIcon.icAir,
+                                height: 40,
+                                width: 40,
                               ),
-                            ),
-                          ),
-                          SizedBox(width: 145),
-                          Container(
-                            height: 22,
-                            width: 45,
-                            decoration: BoxDecoration(
-                              color: Color(0xff282828),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 8,top: 2),
-                              child: Text(
-                                '7842',
-                                style: TextStyle(color: Color(0xffFDFDFD),
-                                fontSize: 12
+                              Padding(
+                                padding: const EdgeInsets.only(left: 10),
+                                child: Text(
+                                  'LH1782',
+                                  style: TextStyle(
+                                    color: Color(0XFFFDFDFD),
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: 'JetBrains',
+                                  ),
                                 ),
                               ),
-                            ),
+                              SizedBox(width: 145),
+                              Container(
+                                height: 24,
+                                width: 45,
+                                decoration: BoxDecoration(
+                                  color: Color(0xff282828),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    left: 8,
+                                    top: 3,
+                                  ),
+                                  child: Text(
+                                    '7842',
+                                    style: TextStyle(
+                                      color: Color(0xffFDFDFD),
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(width: 8),
+                              Container(
+                                height: 24,
+                                width: 62,
+                                decoration: BoxDecoration(
+                                  color: Color(0xff282828),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    left: 8,
+                                    top: 3,
+                                  ),
+                                  child: Text(
+                                    'D-AISP',
+                                    style: TextStyle(
+                                      color: Color(0xffFDFDFD),
+                                      fontSize: 12,
+                                      fontFamily: 'JetBrains',
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                          SizedBox(width: 8),
-                          Container(
-                            height: 22,
-                            width: 62,
-                            decoration: BoxDecoration(
-                              color: Color(0xff282828),
-                              borderRadius: BorderRadius.circular(20),
+                          SizedBox(height: 30),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 2),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Munich',
+                                  style: TextStyle(
+                                    color: Color(0xffFDFDFD),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: 'JetBrains',
+                                  ),
+                                ),
+                                SizedBox(width: 0),
+                                Row(
+                                  children: [
+
+                                    Text(
+                                      'Munich',
+                                      style: TextStyle(
+                                        color: Color(0xffFDFDFD),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                        fontFamily: 'JetBrains',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
                         ],
