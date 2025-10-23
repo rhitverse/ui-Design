@@ -299,7 +299,7 @@ class _HomePageState extends State<HomePage> {
                           Row(
                             children: [
                               SvgPicture.asset(
-                                AppIcon.icAir,
+                                AppIcon.icAir2,
                                 height: 40,
                                 width: 40,
                               ),
@@ -474,7 +474,7 @@ class _HomePageState extends State<HomePage> {
                           Row(
                             children: [
                               SvgPicture.asset(
-                                AppIcon.icAir,
+                                AppIcon.icAir3,
                                 height: 40,
                                 width: 40,
                               ),
