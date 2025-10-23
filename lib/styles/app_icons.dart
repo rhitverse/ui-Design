@@ -11,4 +11,5 @@ class AppIcon {
   static const icAir1 = '${_svg}airline.svg';
   static const icAir = '${_svg}airways2.svg';
   static const icAirMode = '${_svg}Mode.svg';
+  static const icTakeoff = '${_svg}takeoff.svg';
 }
