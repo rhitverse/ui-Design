@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                             child: Text(
                               'Map',
                               style: TextStyle(
-                                color: Color(0xffFDFDFD).withOpacity(0.8),
+                                color: Color(0xffFDFDFD).withValues(alpha: 0.8),
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 fontFamily: 'JetBrains',
@@ -210,19 +210,19 @@ class _HomePageState extends State<HomePage> {
                               alignment: Alignment.center,
                               children: [
                                 Positioned(
-                                  left: 65,
-                                  right: 65,
+                                  left: 75,
+                                  right: 75,
                                   child: Container(
                                     height: 3,
                                     color: const Color(0xFF444444),
                                   ),
                                 ),
                                 Positioned(
-                                  left: 65,
+                                  left: 75,
                                   child: Container(
                                     height: 2,
                                     width:
-                                        ((screenWidth - 30) * (progress / 100)),
+                                        ((screenWidth - 170) * (progress / 70)),
                                     decoration: const BoxDecoration(
                                       gradient: LinearGradient(
                                         colors: [
@@ -385,15 +385,15 @@ class _HomePageState extends State<HomePage> {
                               alignment: Alignment.center,
                               children: [
                                 Positioned(
-                                  left: 65,
-                                  right: 65,
+                                  left: 75,
+                                  right: 75,
                                   child: Container(
                                     height: 3,
                                     color: const Color(0xFF444444),
                                   ),
                                 ),
                                 Positioned(
-                                  left: 65,
+                                  left: 75,
                                   child: Container(
                                     height: 2,
                                     width:
@@ -411,7 +411,7 @@ class _HomePageState extends State<HomePage> {
                                 Positioned(
                                   left:
                                   65 +
-                                      ((screenWidth - 100) * (progress / 140)) -
+                                      ((screenWidth - 100) * (progress / 110)) -
                                       14,
                                   child: UiHelper.customSvg(
                                     svgPath: "assets/svg/Mode.svg",
@@ -560,19 +560,19 @@ class _HomePageState extends State<HomePage> {
                               alignment: Alignment.center,
                               children: [
                                 Positioned(
-                                  left: 65,
-                                  right: 65,
+                                  left: 75,
+                                  right: 75,
                                   child: Container(
                                     height: 3,
                                     color: const Color(0xFF444444),
                                   ),
                                 ),
                                 Positioned(
-                                  left: 65,
+                                  left: 75,
                                   child: Container(
                                     height: 2,
                                     width:
-                                    ((screenWidth - 30) * (progress / 83)),
+                                    ((screenWidth - 30) * (progress / 90)),
                                     decoration: const BoxDecoration(
                                       gradient: LinearGradient(
                                         colors: [
@@ -586,7 +586,7 @@ class _HomePageState extends State<HomePage> {
                                 Positioned(
                                   left:
                                   65 +
-                                      ((screenWidth - 40) * (progress / 82)) -
+                                      ((screenWidth - 40) * (progress / 86)) -
                                       14,
                                   child: UiHelper.customSvg(
                                     svgPath: "assets/svg/Mode.svg",
@@ -735,19 +735,19 @@ class _HomePageState extends State<HomePage> {
                               alignment: Alignment.center,
                               children: [
                                 Positioned(
-                                  left: 65,
-                                  right: 65,
+                                  left: 75,
+                                  right: 75,
                                   child: Container(
                                     height: 3,
                                     color: const Color(0xFF444444),
                                   ),
                                 ),
                                 Positioned(
-                                  left: 65,
+                                  left: 75,
                                   child: Container(
                                     height: 2,
                                     width:
-                                    ((screenWidth - 30) * (progress / 100)),
+                                    ((screenWidth - 30) * (progress / 105)),
                                     decoration: const BoxDecoration(
                                       gradient: LinearGradient(
                                         colors: [
@@ -761,7 +761,7 @@ class _HomePageState extends State<HomePage> {
                                 Positioned(
                                   left:
                                   65 +
-                                      ((screenWidth - 8) * (progress / 100)) -
+                                      ((screenWidth - 8) * (progress / 108)) -
                                       14,
                                   child: UiHelper.customSvg(
                                     svgPath: "assets/svg/Mode.svg",
