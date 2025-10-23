@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ui_design/styles/app_icons.dart';
 import 'package:ui_design/widget/ui_helper.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  double progress = 40; // initial progress value (0–100)
+
+  @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
-      backgroundColor: Color(0xff111111),
+      backgroundColor: const Color(0xff111111),
       body: SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
@@ -22,7 +31,6 @@ class HomePage extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 10, right: 10, top: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Icon(Icons.arrow_back, color: Colors.white),
                       const Text(
@@ -81,8 +89,8 @@ class HomePage extends StatelessWidget {
                           child: Center(
                             child: Text(
                               'Map',
-                              style: const TextStyle(
-                                color: Color(0xffFFFFFF),
+                              style: TextStyle(
+                                color: Color(0xffFDFDFD).withOpacity(0.8),
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 fontFamily: 'JetBrains',
@@ -94,19 +102,24 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
-                    height: 175,
+                    height: 165,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Color(0xff1D1D1D),
+                      color: const Color(0xff1D1D1D),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 18, left: 16),
+                      padding: const EdgeInsets.only(
+                        top: 18,
+                        left: 16,
+                        right: 16,
+                      ),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             children: [
@@ -115,57 +128,47 @@ class HomePage extends StatelessWidget {
                                 height: 40,
                                 width: 40,
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 10),
-                                child: Text(
-                                  'LH1782',
-                                  style: TextStyle(
-                                    color: Color(0XFFFDFDFD),
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w500,
-                                    fontFamily: 'JetBrains',
-                                  ),
+                              const SizedBox(width: 10),
+                              const Text(
+                                'LH1782',
+                                style: TextStyle(
+                                  color: Colors.white70,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: 'JetBrains',
                                 ),
                               ),
-                              SizedBox(width: 145),
+                              const Spacer(),
                               Container(
                                 height: 24,
                                 width: 45,
                                 decoration: BoxDecoration(
-                                  color: Color(0xff282828),
+                                  color: const Color(0xff282828),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 8,
-                                    top: 3,
-                                  ),
+                                child: const Center(
                                   child: Text(
                                     '7842',
                                     style: TextStyle(
-                                      color: Color(0xffFDFDFD),
+                                      color: Colors.white70,
                                       fontSize: 12,
                                     ),
                                   ),
                                 ),
                               ),
-                              SizedBox(width: 8),
+                              const SizedBox(width: 8),
                               Container(
                                 height: 24,
                                 width: 62,
                                 decoration: BoxDecoration(
-                                  color: Color(0xff282828),
+                                  color: const Color(0xff282828),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 8,
-                                    top: 3,
-                                  ),
+                                child: const Center(
                                   child: Text(
                                     'D-AISP',
                                     style: TextStyle(
-                                      color: Color(0xffFDFDFD),
+                                      color: Colors.white70,
                                       fontSize: 12,
                                       fontFamily: 'JetBrains',
                                     ),
@@ -174,35 +177,97 @@ class HomePage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(height: 30),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 2),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Munich',
+                          SizedBox(height: 32),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const [
+                              Text(
+                                'Munich',
+                                style: TextStyle(
+                                  color: Colors.white70,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: 'JetBrains',
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(right: 14),
+                                child: Text(
+                                  'Athens',
                                   style: TextStyle(
-                                    color: Color(0xffFDFDFD),
+                                    color: Colors.white70,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500,
                                     fontFamily: 'JetBrains',
                                   ),
                                 ),
-                                SizedBox(width: 0),
-                                Row(
-                                  children: [
-
-                                    Text(
-                                      'Munich',
-                                      style: TextStyle(
-                                        color: Color(0xffFDFDFD),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily: 'JetBrains',
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 45,
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Positioned(
+                                  left: 65,
+                                  right: 65,
+                                  child: Container(
+                                    height: 3,
+                                    color: const Color(0xFF444444),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 65,
+                                  child: Container(
+                                    height: 2,
+                                    width:
+                                        ((screenWidth - 60) * (progress / 100)),
+                                    decoration: const BoxDecoration(
+                                      gradient: LinearGradient(
+                                        colors: [
+                                          Color(0xFFFF6B35),
+                                          Color(0xFFF7931E),
+                                        ],
                                       ),
                                     ),
-                                  ],
+                                  ),
+                                ),
+                                Positioned(
+                                  left:
+                                      65 +
+                                      ((screenWidth - 40) * (progress / 100)) -
+                                      14,
+                                  child: UiHelper.customSvg(
+                                    svgPath: "assets/svg/Mode.svg",
+                                    height: 25,
+                                    width: 25,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                const Positioned(
+                                  left: 0,
+                                  child: Text(
+                                    'MUC',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 35,
+                                      fontWeight: FontWeight.w400,
+                                      fontFamily: 'JetBrains',
+                                    ),
+                                  ),
+                                ),
+                                const Positioned(
+                                  right: 0,
+                                  child: Text(
+                                    'ATH',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 35,
+                                      fontWeight: FontWeight.w400,
+                                      fontFamily: 'JetBrains',
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
