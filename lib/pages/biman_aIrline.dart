@@ -1,12 +1,25 @@
-// biman_airline.dart
 import 'package:flutter/material.dart';
+import 'package:ui_design/pages/search_page.dart';
 import 'package:ui_design/widget/ui_helper.dart';
+
+import 'home_page.dart';
 
 class BimanAirlinePage extends StatelessWidget {
   const BimanAirlinePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final details = const [
+      {'label': 'Type', 'value': 'Boeing 787-8 Dreamliner'},
+      {'label': 'Serial Number', 'value': '40126'},
+      {'label': 'Registration', 'value': 'S2-AJS'},
+      {'label': 'First Flight', 'value': 'August 6, 2018'},
+      {'label': 'Capacity', 'value': '271 passengers'},
+      {'label': 'Length', 'value': '56.7 m'},
+      {'label': 'Wingspan', 'value': '60.1 m'},
+      {'label': 'Max Speed', 'value': '954 km/h'},
+    ];
+
     return Scaffold(
       backgroundColor: const Color(0xFF6BA3D8),
       appBar: AppBar(
@@ -14,7 +27,13 @@ class BimanAirlinePage extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const HomePage()),
+            );
+
+          },
         ),
         title: const Text(
           'Aircraft',
@@ -53,10 +72,10 @@ class BimanAirlinePage extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 3,
+            flex: 4,
             child: Container(
               decoration: const BoxDecoration(
-                color: Color(0xFF1A1A1A),
+                color: Color(0xFF000000),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30),
                   topRight: Radius.circular(30),
@@ -71,15 +90,15 @@ class BimanAirlinePage extends StatelessWidget {
                       children: [
                         UiHelper.customSvg(
                           svgPath: "assets/svg/biman.svg",
-                          height: 30,
-                          width: 30,
+                          height: 35,
+                          width: 35,
                         ),
-                        const SizedBox(width: 12),
+                        const SizedBox(width: 19),
                         const Text(
                           'Biman Airlines',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20,
+                            fontSize: 24,
                             fontWeight: FontWeight.w600,
                             fontFamily: "JetBrains",
                           ),
@@ -87,29 +106,28 @@ class BimanAirlinePage extends StatelessWidget {
                       ],
                     ),
                   ),
-
                   const SizedBox(height: 24),
-
-                  // Details List
                   Expanded(
-                    child: ListView(
-                      padding: const EdgeInsets.symmetric(horizontal: 24),
-                      children: const [
-                        DetailRow(
-                          label: 'Type',
-                          value: 'Boeing 787-8 Dreamliner',
-                        ),
-                        DetailRow(label: 'Serial Number', value: '40126'),
-                        DetailRow(label: 'Registration', value: 'S2-AJS'),
-                        DetailRow(
-                          label: 'First Flight',
-                          value: 'August 6, 2018',
-                        ),
-                        DetailRow(label: 'Capacity', value: '271 passengers'),
-                        DetailRow(label: 'Length', value: '56.7 m'),
-                        DetailRow(label: 'Wingspan', value: '60.1 m'),
-                        DetailRow(label: 'Max Speed', value: '954 km/h'),
-                      ],
+                    child: SingleChildScrollView(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Column(
+                        children: List.generate(details.length, (index) {
+                          final item = details[index];
+                          final isFirst = index == 0;
+                          final isLast = index == details.length - 1;
+
+                          return DetailBox(
+                            label: item['label']!,
+                            value: item['value']!,
+                            borderRadius: BorderRadius.only(
+                              topLeft: isFirst ? const Radius.circular(10) : Radius.zero,
+                              topRight: isFirst ? const Radius.circular(10) : Radius.zero,
+                              bottomLeft: isLast ? const Radius.circular(10) : Radius.zero,
+                              bottomRight: isLast ? const Radius.circular(10) : Radius.zero,
+                            ),
+                          );
+                        }),
+                      ),
                     ),
                   ),
                 ],
@@ -122,19 +140,26 @@ class BimanAirlinePage extends StatelessWidget {
   }
 }
 
-class DetailRow extends StatelessWidget {
+class DetailBox extends StatelessWidget {
   final String label;
   final String value;
+  final BorderRadius borderRadius;
 
-  const DetailRow({Key? key, required this.label, required this.value})
-    : super(key: key);
+  const DetailBox({
+    Key? key,
+    required this.label,
+    required this.value,
+    this.borderRadius = BorderRadius.zero,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 16),
-      decoration: const BoxDecoration(
-        border: Border(bottom: BorderSide(color: Color(0xFF2A2A2A), width: 1)),
+      margin: const EdgeInsets.only(bottom: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 15),
+      decoration: BoxDecoration(
+        color: const Color(0xff1C1C1C),
+        borderRadius: borderRadius,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -142,9 +167,10 @@ class DetailRow extends StatelessWidget {
           Text(
             label,
             style: const TextStyle(
-              color: Color(0xFF888888),
+              color: Color(0xFFAAAAAA),
               fontSize: 15,
               fontWeight: FontWeight.w400,
+              fontFamily: "JetBrains",
             ),
           ),
           Text(
@@ -153,6 +179,7 @@ class DetailRow extends StatelessWidget {
               color: Colors.white,
               fontSize: 15,
               fontWeight: FontWeight.w500,
+              fontFamily: "JetBrains",
             ),
           ),
         ],
