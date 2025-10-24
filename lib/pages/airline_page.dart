@@ -165,12 +165,14 @@ class _FlightScreenState extends State<FlightScreen> {
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   // Departure
                                   Expanded(
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: const [
                                         Text(
                                           'CPH',
@@ -202,7 +204,9 @@ class _FlightScreenState extends State<FlightScreen> {
 
                                   // Flight Icon
                                   Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                    ),
                                     child: Icon(
                                       Icons.flight,
                                       color: const Color(0xFFFFA500),
@@ -211,7 +215,8 @@ class _FlightScreenState extends State<FlightScreen> {
                                   ),
                                   Expanded(
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: const [
                                         Text(
                                           'LCA',
@@ -279,7 +284,7 @@ class _FlightScreenState extends State<FlightScreen> {
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFFFF6B35),
                                                 borderRadius:
-                                                BorderRadius.circular(2),
+                                                    BorderRadius.circular(2),
                                               ),
                                             ),
                                             Transform.rotate(
@@ -298,19 +303,19 @@ class _FlightScreenState extends State<FlightScreen> {
                                   const SizedBox(height: 12),
                                   Row(
                                     mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                        MainAxisAlignment.spaceBetween,
                                     children: const [
                                       Text(
-                                        '1 235 km • 1h 25m',
+                                        '1 235 km   •  1h 25m',
                                         style: TextStyle(
-                                          fontSize: 11,
+                                          fontSize: 14,
                                           color: Colors.white54,
                                         ),
                                       ),
                                       Text(
                                         '1 615 km • 1h 52m',
                                         style: TextStyle(
-                                          fontSize: 11,
+                                          fontSize: 14,
                                           color: Colors.white54,
                                         ),
                                       ),
@@ -334,11 +339,11 @@ class _FlightScreenState extends State<FlightScreen> {
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Row(
                                           mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                              MainAxisAlignment.spaceBetween,
                                           children: const [
                                             Text(
                                               'Scheduled',
@@ -352,7 +357,7 @@ class _FlightScreenState extends State<FlightScreen> {
                                               style: TextStyle(
                                                 fontSize: 14,
                                                 fontWeight: FontWeight.w600,
-                                                color: Colors.white70
+                                                color: Colors.white70,
                                               ),
                                             ),
                                           ],
@@ -371,11 +376,11 @@ class _FlightScreenState extends State<FlightScreen> {
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Row(
                                           mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                              MainAxisAlignment.spaceBetween,
                                           children: const [
                                             Text(
                                               'Actual',
@@ -417,11 +422,11 @@ class _FlightScreenState extends State<FlightScreen> {
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Row(
                                           mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                              MainAxisAlignment.spaceBetween,
                                           children: const [
                                             Text(
                                               'Scheduled',
@@ -456,11 +461,11 @@ class _FlightScreenState extends State<FlightScreen> {
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Row(
                                           mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                              MainAxisAlignment.spaceBetween,
                                           children: const [
                                             Text(
                                               'Estimated',
@@ -500,7 +505,7 @@ class _FlightScreenState extends State<FlightScreen> {
                               ),
                               child: Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   const Text(
                                     'Flight information',
@@ -508,7 +513,7 @@ class _FlightScreenState extends State<FlightScreen> {
                                       fontSize: 13,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white,
-                                      fontFamily: "JetBrains"
+                                      fontFamily: "JetBrains",
                                     ),
                                   ),
                                 ],
@@ -529,7 +534,7 @@ class _FlightScreenState extends State<FlightScreen> {
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                       children: const [
                                         SizedBox(height: 6),
                                         Text(
@@ -555,7 +560,7 @@ class _FlightScreenState extends State<FlightScreen> {
                                     ),
                                     child: Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.center,
+                                          MainAxisAlignment.start,
                                       children: const [
                                         Text(
                                           '🇩🇰',
@@ -566,10 +571,93 @@ class _FlightScreenState extends State<FlightScreen> {
                                           'Denmark',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 12,
-                                            color: Colors.white,
+                                            fontSize: 15,
+                                            color: Colors.white70,
                                           ),
                                         ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 22),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    padding: const EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFF1C1C1E),
+                                      borderRadius: BorderRadius.only(
+                                        bottomLeft: Radius.circular(20)
+                                      ),
+                                    ),
+                                    child: Row(
+                                     mainAxisAlignment: MainAxisAlignment.start,
+                                      children: const [
+                                        SizedBox(height: 6),
+                                        Text(
+                                          'Speed',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 14,
+                                            color: Color(0xff858585),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 70),
+                                          child: Text(
+                                            '870km/h',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 14,
+                                              color: Colors.white70
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(width: 2),
+                                SizedBox(
+                                  width: 185,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFF1C1C1E),
+                                      borderRadius: BorderRadius.only(
+                                        bottomRight: Radius.circular(20)
+                                      ),
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: const [
+                                      SizedBox(height: 6),
+                                      Text(
+                                        'Altitude',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 14,
+                                          color: Color(0xff858585),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 40),
+                                        child: Text(
+                                          '11 300 m',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 14,
+                                              color: Colors.white70
+                                          ),
+                                        ),
+                                      ),
                                       ],
                                     ),
                                   ),
