@@ -156,8 +156,6 @@ class _FlightScreenState extends State<FlightScreen> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           const SizedBox(height: 16),
-
-                          // Route Section - Single Container
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 16),
                             child: Container(
@@ -211,8 +209,6 @@ class _FlightScreenState extends State<FlightScreen> {
                                       size: 28,
                                     ),
                                   ),
-
-                                  // Arrival
                                   Expanded(
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -248,26 +244,24 @@ class _FlightScreenState extends State<FlightScreen> {
                               ),
                             ),
                           ),
-
-                          const SizedBox(height: 6),
-
-                          // Progress Container
+                          const SizedBox(height: 4),
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 16),
                             child: Container(
-                              padding: const EdgeInsets.all(16),
+                              height: 90,
+                              padding: const EdgeInsets.all(18),
                               decoration: BoxDecoration(
                                 color: const Color(0xFF1C1C1E),
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(0),
                               ),
                               child: Column(
                                 children: [
-                                  const SizedBox(height: 6),
+                                  const SizedBox(height: 2),
                                   Stack(
                                     alignment: Alignment.centerLeft,
                                     children: [
                                       Container(
-                                        height: 3,
+                                        height: 2,
                                         decoration: BoxDecoration(
                                           color: Colors.white12,
                                           borderRadius: BorderRadius.circular(
@@ -281,7 +275,7 @@ class _FlightScreenState extends State<FlightScreen> {
                                           alignment: Alignment.centerRight,
                                           children: [
                                             Container(
-                                              height: 3,
+                                              height: 2,
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFFFF6B35),
                                                 borderRadius:
@@ -336,7 +330,7 @@ class _FlightScreenState extends State<FlightScreen> {
                                     padding: const EdgeInsets.all(16),
                                     decoration: BoxDecoration(
                                       color: const Color(0xFF1C1C1E),
-                                      borderRadius: BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.circular(0),
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
@@ -356,9 +350,9 @@ class _FlightScreenState extends State<FlightScreen> {
                                             Text(
                                               '12:30',
                                               style: TextStyle(
-                                                fontSize: 24,
+                                                fontSize: 14,
                                                 fontWeight: FontWeight.w600,
-                                                color: Colors.white,
+                                                color: Colors.white70
                                               ),
                                             ),
                                           ],
@@ -367,13 +361,13 @@ class _FlightScreenState extends State<FlightScreen> {
                                     ),
                                   ),
                                 ),
-                                const SizedBox(width: 12),
+                                const SizedBox(width: 2),
                                 Expanded(
                                   child: Container(
                                     padding: const EdgeInsets.all(16),
                                     decoration: BoxDecoration(
                                       color: const Color(0xFF1C1C1E),
-                                      borderRadius: BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.circular(0),
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
@@ -393,9 +387,9 @@ class _FlightScreenState extends State<FlightScreen> {
                                             Text(
                                               '12:48',
                                               style: TextStyle(
-                                                fontSize: 24,
+                                                fontSize: 14,
                                                 fontWeight: FontWeight.w600,
-                                                color: Colors.white,
+                                                color: Colors.white70,
                                               ),
                                             ),
                                           ],
@@ -407,7 +401,7 @@ class _FlightScreenState extends State<FlightScreen> {
                               ],
                             ),
                           ),
-                          const SizedBox(height: 6),
+                          const SizedBox(height: 4),
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 16),
                             child: Row(
@@ -417,7 +411,9 @@ class _FlightScreenState extends State<FlightScreen> {
                                     padding: const EdgeInsets.all(16),
                                     decoration: BoxDecoration(
                                       color: const Color(0xFF1C1C1E),
-                                      borderRadius: BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.only(
+                                        bottomLeft: Radius.circular(12),
+                                      ),
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
@@ -430,16 +426,16 @@ class _FlightScreenState extends State<FlightScreen> {
                                             Text(
                                               'Scheduled',
                                               style: TextStyle(
-                                                fontSize: 11,
+                                                fontSize: 14,
                                                 color: Colors.white38,
                                               ),
                                             ),
                                             Text(
                                               '17:10',
                                               style: TextStyle(
-                                                fontSize: 24,
+                                                fontSize: 14,
                                                 fontWeight: FontWeight.w600,
-                                                color: Colors.white,
+                                                color: Colors.white70,
                                               ),
                                             ),
                                           ],
@@ -448,13 +444,15 @@ class _FlightScreenState extends State<FlightScreen> {
                                     ),
                                   ),
                                 ),
-                                const SizedBox(width: 12),
+                                const SizedBox(width: 2),
                                 Expanded(
                                   child: Container(
                                     padding: const EdgeInsets.all(16),
                                     decoration: BoxDecoration(
                                       color: const Color(0xFF1C1C1E),
-                                      borderRadius: BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.only(
+                                        bottomRight: Radius.circular(12),
+                                      ),
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
@@ -467,16 +465,16 @@ class _FlightScreenState extends State<FlightScreen> {
                                             Text(
                                               'Estimated',
                                               style: TextStyle(
-                                                fontSize: 11,
+                                                fontSize: 14,
                                                 color: Colors.white38,
                                               ),
                                             ),
                                             Text(
                                               '17:32',
                                               style: TextStyle(
-                                                fontSize: 24,
+                                                fontSize: 14,
                                                 fontWeight: FontWeight.w600,
-                                                color: Colors.white,
+                                                color: Colors.white70,
                                               ),
                                             ),
                                           ],
@@ -488,14 +486,17 @@ class _FlightScreenState extends State<FlightScreen> {
                               ],
                             ),
                           ),
-                          const SizedBox(height: 6),
+                          const SizedBox(height: 16),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: Container(
-                              padding: const EdgeInsets.all(16),
+                              padding: const EdgeInsets.all(8),
                               decoration: BoxDecoration(
-                                color: const Color(0xFF1C1C1E),
-                                borderRadius: BorderRadius.circular(12),
+                                color: const Color(0xFF2C2C2C),
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(12),
+                                  topRight: Radius.circular(12),
+                                ),
                               ),
                               child: Row(
                                 mainAxisAlignment:
@@ -507,58 +508,50 @@ class _FlightScreenState extends State<FlightScreen> {
                                       fontSize: 13,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white,
+                                      fontFamily: "JetBrains"
                                     ),
-                                  ),
-                                  const Icon(
-                                    Icons.chevron_right,
-                                    color: Colors.white24,
-                                    size: 24,
                                   ),
                                 ],
                               ),
                             ),
                           ),
-
-                          const SizedBox(height: 6),
-
-                          // Aircraft, Denmark, Speed, Altitude Row
+                          const SizedBox(height: 4),
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 22),
                             child: Row(
                               children: [
-                                // Aircraft Container
                                 Expanded(
                                   child: Container(
-                                    padding: const EdgeInsets.all(16),
+                                    padding: const EdgeInsets.all(12),
                                     decoration: BoxDecoration(
                                       color: const Color(0xFF1C1C1E),
-                                      borderRadius: BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.circular(0),
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
                                       CrossAxisAlignment.start,
                                       children: const [
-                                        SizedBox(height: 8),
+                                        SizedBox(height: 6),
                                         Text(
-                                          'Boeing 737-800',
+                                          'Boeing  737-800',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
                                             fontSize: 14,
-                                            color: Colors.white,
+                                            color: Colors.white70,
                                           ),
                                         ),
                                       ],
                                     ),
                                   ),
                                 ),
-                                SizedBox(width: 10),
+                                SizedBox(width: 2),
                                 SizedBox(
                                   width: 185,
                                   child: Container(
-                                    padding: const EdgeInsets.all(16),
+                                    padding: const EdgeInsets.all(12),
                                     decoration: BoxDecoration(
                                       color: const Color(0xFF1C1C1E),
-                                      borderRadius: BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.circular(0),
                                     ),
                                     child: Row(
                                       mainAxisAlignment:
@@ -568,7 +561,7 @@ class _FlightScreenState extends State<FlightScreen> {
                                           '🇩🇰',
                                           style: TextStyle(fontSize: 18),
                                         ),
-                                        SizedBox(width: 6),
+                                        SizedBox(width: 10),
                                         Text(
                                           'Denmark',
                                           style: TextStyle(
