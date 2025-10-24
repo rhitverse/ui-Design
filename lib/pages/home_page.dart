@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ui_design/pages/search_page.dart';
 import 'package:ui_design/styles/app_icons.dart';
 import 'package:ui_design/widget/ui_helper.dart';
 import 'package:ui_design/pages/airline_page.dart';
-
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -43,7 +43,14 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const SearchPage(),
+                            ),
+                          );
+                        },
                         icon: SvgPicture.asset(
                           AppIcon.icSearch,
                           width: 28,
